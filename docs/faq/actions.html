@@ -1,0 +1,767 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Actions · resourceful-redux</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../api-reference/" />
+    
+    
+    <link rel="prev" href="state-tree.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Home
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduction/">
+            
+                <a href="../introduction/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../introduction/motivation.html">
+            
+                <a href="../introduction/motivation.html">
+            
+                    
+                    Motivation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../introduction/core-concepts.html">
+            
+                <a href="../introduction/core-concepts.html">
+            
+                    
+                    Core Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../introduction/similar-projects.html">
+            
+                <a href="../introduction/similar-projects.html">
+            
+                    
+                    Similar Projects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../introduction/examples.html">
+            
+                <a href="../introduction/examples.html">
+            
+                    
+                    Examples
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../guides/">
+            
+                <a href="../guides/">
+            
+                    
+                    Guides
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../guides/resources.html">
+            
+                <a href="../guides/resources.html">
+            
+                    
+                    Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../guides/state-structure.html">
+            
+                <a href="../guides/state-structure.html">
+            
+                    
+                    State Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../guides/crud-actions.html">
+            
+                <a href="../guides/crud-actions.html">
+            
+                    
+                    CRUD Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../guides/tracking-requests.html">
+            
+                <a href="../guides/tracking-requests.html">
+            
+                    
+                    Tracking Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../guides/request-labels.html">
+            
+                <a href="../guides/request-labels.html">
+            
+                    
+                    Request Labels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../guides/request-statuses.html">
+            
+                <a href="../guides/request-statuses.html">
+            
+                    
+                    Request Statuses
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../guides/reading-resources.html">
+            
+                <a href="../guides/reading-resources.html">
+            
+                    
+                    Reading Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../guides/updating-resources.html">
+            
+                <a href="../guides/updating-resources.html">
+            
+                    
+                    Updating Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../guides/creating-resources.html">
+            
+                <a href="../guides/creating-resources.html">
+            
+                    
+                    Creating Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../guides/deleting-resources.html">
+            
+                <a href="../guides/deleting-resources.html">
+            
+                    
+                    Deleting Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../guides/plugins.html">
+            
+                <a href="../guides/plugins.html">
+            
+                    
+                    Plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../recipes/">
+            
+                <a href="../recipes/">
+            
+                    
+                    Recipes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../recipes/canceling-requests.html">
+            
+                <a href="../recipes/canceling-requests.html">
+            
+                    
+                    Canceling Requests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../recipes/unauthorized-responses.html">
+            
+                <a href="../recipes/unauthorized-responses.html">
+            
+                    
+                    Unauthorized Responses
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../extensions/">
+            
+                <a href="../extensions/">
+            
+                    
+                    Extensions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../extensions/prop-types.html">
+            
+                <a href="../extensions/prop-types.html">
+            
+                    
+                    Prop Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../extensions/action-creators.html">
+            
+                <a href="../extensions/action-creators.html">
+            
+                    
+                    Action Creators
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="general.html">
+            
+                <a href="general.html">
+            
+                    
+                    General
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="state-tree.html">
+            
+                <a href="state-tree.html">
+            
+                    
+                    State Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.3" data-path="actions.html">
+            
+                <a href="actions.html">
+            
+                    
+                    Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../api-reference/">
+            
+                <a href="../api-reference/">
+            
+                    
+                    API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../api-reference/resource-reducer.html">
+            
+                <a href="../api-reference/resource-reducer.html">
+            
+                    
+                    resourceReducer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../api-reference/get-status.html">
+            
+                <a href="../api-reference/get-status.html">
+            
+                    
+                    getStatus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../api-reference/get-resources.html">
+            
+                <a href="../api-reference/get-resources.html">
+            
+                    
+                    getResources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../api-reference/upsert-resources.html">
+            
+                <a href="../api-reference/upsert-resources.html">
+            
+                    
+                    upsertResources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../api-reference/set-resource-meta.html">
+            
+                <a href="../api-reference/set-resource-meta.html">
+            
+                    
+                    setResourceMeta
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../api-reference/action-types.html">
+            
+                <a href="../api-reference/action-types.html">
+            
+                    
+                    actionTypes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../api-reference/request-statuses.html">
+            
+                <a href="../api-reference/request-statuses.html">
+            
+                    
+                    requestStatuses
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Actions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="actions">Actions</h1>
+<h4 id="are-there-action-creators">Are there Action Creators?</h4>
+<p>Not in the core library, but there is an
+<a href="../extensions/action-creators.html">Action Creators extension</a>.</p>
+<p>Developers have different preferences when it comes to making requests, so we
+made this library easy to use with any request library that you choose. We&apos;ve
+had great success with the Action Creator extension, but should you choose to
+write your own, we have guides to help you.</p>
+<p>Refer to the <a href="../guides/crud-actions.html">CRUD Actions</a> guide to learn more
+about how to build your own action creator, or the four CRUD guides for examples
+of action creators:</p>
+<ul>
+<li><a href="../guides/reading-resources.html">Reading resources</a></li>
+<li><a href="../guides/reading-resources.html">Updating resources</a></li>
+<li><a href="../guides/reading-resources.html">Creating resources</a></li>
+<li><a href="../guides/reading-resources.html">Deleting resources</a></li>
+</ul>
+<h4 id="does-resourceful-redux-require-you-to-use-a-specific-tool-for-making-http-requests">Does Resourceful Redux require you to use a specific tool for making HTTP requests?</h4>
+<p>No, you can use any system for making requests that you&apos;d like.</p>
+<h4 id="should-all-actions-have-labels">Should all Actions have labels?</h4>
+<p>Probably not.  We recommend using labels when they provide you value. Two common
+use cases for labels are:</p>
+<ol>
+<li><p>creating resources</p>
+</li>
+<li><p>multiple bulk reads of the same resource type on the same page</p>
+</li>
+</ol>
+<p>A handy rule of thumb for when to use labels, as well as much more information
+about labels, can be found in
+<a href="../guides/request-labels.html#when-to-use-labels">the Labels guide</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="state-tree.html" class="navigation navigation-prev " aria-label="Previous page: State Tree">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../api-reference/" class="navigation navigation-next " aria-label="Next page: API Reference">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Actions","level":"1.6.3","depth":2,"next":{"title":"API Reference","level":"1.7","depth":1,"path":"docs/api-reference/README.md","ref":"docs/api-reference/README.md","articles":[{"title":"resourceReducer","level":"1.7.1","depth":2,"path":"docs/api-reference/resource-reducer.md","ref":"docs/api-reference/resource-reducer.md","articles":[]},{"title":"getStatus","level":"1.7.2","depth":2,"path":"docs/api-reference/get-status.md","ref":"docs/api-reference/get-status.md","articles":[]},{"title":"getResources","level":"1.7.3","depth":2,"path":"docs/api-reference/get-resources.md","ref":"docs/api-reference/get-resources.md","articles":[]},{"title":"upsertResources","level":"1.7.4","depth":2,"path":"docs/api-reference/upsert-resources.md","ref":"docs/api-reference/upsert-resources.md","articles":[]},{"title":"setResourceMeta","level":"1.7.5","depth":2,"path":"docs/api-reference/set-resource-meta.md","ref":"docs/api-reference/set-resource-meta.md","articles":[]},{"title":"actionTypes","level":"1.7.6","depth":2,"path":"docs/api-reference/action-types.md","ref":"docs/api-reference/action-types.md","articles":[]},{"title":"requestStatuses","level":"1.7.7","depth":2,"path":"docs/api-reference/request-statuses.md","ref":"docs/api-reference/request-statuses.md","articles":[]}]},"previous":{"title":"State Tree","level":"1.6.2","depth":2,"path":"docs/faq/state-tree.md","ref":"docs/faq/state-tree.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","prism","-highlight","anchorjs","github"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"github":{"url":"https://github.com/jmeas/resourceful-redux/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/jmeas/resourceful-redux/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"INDEX.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"resourceful-redux","gitbook":"3.2.2"},"file":{"path":"docs/faq/actions.md","mtime":"2017-07-01T19:50:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-01T19:50:57.210Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-anchorjs/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
